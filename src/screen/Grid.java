@@ -217,6 +217,11 @@ public class Grid {
         this.panel = panel;
     }
 
+    public void findPath(){
+        this.findWay(this.getGrid().length-1,this.getGrid()[0].length-2,1);
+        this.traceWay(0,1);
+    }
+
     public void findWay(int i, int y, int index){
         if(index == 1){
             this.grid[i][y].setValue(index);

@@ -2,14 +2,19 @@ package screen;
 
 import component.Case;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class Panel extends JPanel {
 
     Cube[][] gridCube;
 
     public Panel(Case[][] grid){
+        this.setPreferredSize(new Dimension(805,805));
         gridCube = new Cube[grid.length][grid[0].length];
         for(int i = 0; i < grid.length; i++){
             for(int y = 0; y < grid[i].length;y++){
